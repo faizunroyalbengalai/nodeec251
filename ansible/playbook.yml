@@ -7,7 +7,7 @@
     app_port: 3000
     project: 'nodeec251'
     web_server: 'nginx'
-    node_version: '20 (default)'
+    node_version: '20'
 
   tasks:
     # ── System update ──────────────────────────────────────────────────────────

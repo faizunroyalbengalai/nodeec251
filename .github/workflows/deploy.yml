@@ -7,6 +7,7 @@ on:
 env:
   ACTIONS_RUNNER_FORCED_INTERNAL_NODE_VERSION: node24
   ACTIONS_RUNNER_FORCE_ACTIONS_NODE_VERSION: node24
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 concurrency:
   group: deploy-${{ github.repository }}
@@ -154,4 +155,3 @@ jobs:
           for i in $(seq 1 12); do
             curl -sf http://${{ needs.provision.outputs.server_ip }}/health && break || sleep 15
           done
-
